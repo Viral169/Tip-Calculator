@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+      }
+    </style>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="bg-blue-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl w-full">
+      <div class="flex justify-between items-center mb-8">
+        <h1 class="text-2xl font-bold tracking-widest">Tip Calculator</h1>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <label class="block text-gray-600 mb-2">Bill</label>
+          <input
+            type="text"
+            value=""
+            class="w-full p-2 border rounded mb-6 billamount"
+            placeholder="Enter Your Bill Amount"
+          />
+
+          <label class="block text-gray-600 mb-2">Select Tip %</label>
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <input
+              type="text"
+              class="w-full p-2 border rounded mb-6 percentage"
+              placeholder="Enter Your "
+            />
+          </div>
+
+          <label class="block text-gray-600 mb-2">Number of People</label>
+          <div class="relative">
+            <input
+              type="text"
+              class="w-full p-2 border rounded pl-10 people"
+              placeholder=""
+            />
+            <i class="fas fa-user absolute left-3 top-3 text-gray-400"></i>
+          </div>
+        </div>
+        <div class="bg-teal-900 text-white p-8 rounded-lg">
+          <div class="flex justify-between items-center mb-6">
+            <div>
+              <p class="text-gray-400">Total Amount</p>
+              <p class="text-gray-400 ">Including Tip</p>
+
+            </div>
+            <p class="text-3xl totalamount">Rs: 0</p>
+          </div>
+          <div class="flex justify-between items-center mb-6">
+            <div>
+              <p class="text-gray-400">Tip</p>
+              <p class="text-gray-400 text-sm">/ person</p>
+            </div>
+            <p class="text-3xl perpersontip">Rs: 0</p>
+          </div>
+          <div class="flex justify-between items-center mb-6">
+            <div>
+              <p class="text-gray-400">Total Bill</p>
+              <p class="text-gray-400 text-sm">/ person</p>
+            </div>
+            <p class="text-3xl totalperperson">Rs: 0</p>
+          </div>
+          <button class="bg-teal-500 text-teal-900 w-full py-2 rounded button">
+            Total Amount
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
